@@ -1,0 +1,57 @@
+/* Base layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Main container styles */
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  margin-left: 250px; /* Same as expanded sidebar width */
+  width: calc(100% - 250px);
+}
+
+/* When sidebar is collapsed */
+.main-container.expanded {
+  margin-left: 80px; /* Same as collapsed sidebar width */
+  width: calc(100% - 80px);
+}
+
+/* Header styles */
+.header {
+  background-color: #34495e;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Content styles */
+.content {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Footer styles */
+.footer {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .main-container.expanded {
+    margin-left: 0;
+    width: 100%;
+  }
+}
