@@ -17,10 +17,13 @@ const Admin = () => {
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
-        return <Route path={prop.path} element={prop.component} key={key} exact />;
-      } else {
-        return null;
+        return <Route path={prop.path} element={prop.component} key={key} />;
+      } else if (prop.views) {
+        return prop.views.map((view, subKey) => (
+          <Route path={view.path} element={view.component} key={`${key}-${subKey}`} />
+        ));
       }
+      return null;
     });
   };
 
@@ -32,8 +35,7 @@ const Admin = () => {
         toggleSidebar={toggleSidebar}
       />
       
-      {/* Main container class is conditionally expanded */}
-      <div className={`main-container ${!isSidebarOpen ? 'expanded' : ''}`}>
+      <div className={`main-container ${!isSidebarOpen ? "expanded" : ""}`}>
         <div className="header">
           <AdminNavbar brandText="Dashboard" />
         </div>

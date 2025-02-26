@@ -19,11 +19,15 @@ const Sidebar = ({ routes, isSidebarOpen, toggleSidebar }) => {
   };
 
   const createLinks = (routes) => {
+    if (!Array.isArray(routes)) {
+      console.error('Routes is not an array:', routes);
+      return null;  // Return nothing or some fallback
+    }
     return routes.map((route, key) => {
       if (route.views) {
         return (
           <NavItem key={key}>
-            <NavLink 
+            <NavLink
               href="#"
               onClick={(e) => { e.preventDefault(); toggleCollapse(route.path); }}
               className={`${activeRoute(route.path)} ${isSidebarOpen ? '' : 'collapsed-link'}`}
@@ -104,6 +108,7 @@ const Sidebar = ({ routes, isSidebarOpen, toggleSidebar }) => {
       }
     });
   };
+  
 
   return (
     <div className={`sidebar ${isSidebarOpen ? 'expanded' : 'collapsed'}`}>

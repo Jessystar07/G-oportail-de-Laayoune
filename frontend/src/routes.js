@@ -1,9 +1,26 @@
+/* eslint-disable react/jsx-pascal-case */
 import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 
-var routes = [
+import Permis from "views/examples/Urbanisme/Permis";
+import SuiviTravaux from "views/examples/annexes-urbanisme/SuiviTravaux";
+import Permis_Sante from "views/examples/bureau-hygiene/Permis_Sante";
+import MarchesCommunaux from "views/examples/marches-communaux/MarchesCommunaux"
+
+import espace_verts from "views/examples/espacesverts/espace_verts";
+import Parcelle from "views/examples/Principal/Parcelle";
+import PaiementExploitation from "views/examples/regie-marches/PaiementExploitation";
+import PermisRegie from "views/examples/RegiePermisCommerciaux/permis_regie";
+import PaimentPermisUrbanisme from "views/examples/regie-urbanisme/PaiementPermisUrbanisme";
+import sport_culture from "views/examples/SportCulture/sport_culture";
+import Voirie from "views/examples/voirie/Voirie";
+import division_commerciaux from "views/examples/division-services-commerciaux/division_commerciaux";
+
+
+
+const routes = [
   {
     path: "/index",
     name: "Géoportail",
@@ -11,271 +28,114 @@ var routes = [
     component: <Index />,
     layout: "/admin",
   },
+
+
   {
-    path: "/principal",
+    path: "/parcelle",
     name: "Principal",
-    icon: "ni ni-building text-blue",
+    icon: "ni ni-map-big text-orange",
+    component: <Parcelle />,
     layout: "/admin",
-    views: [
-      {
-        path: "/parcelle",
-        name: "Parcelle",
-        icon: "ni ni-map-big text-orange",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      },
-      {
-        path: "/requerant-personne-physique",
-        name: "Requérant Personne Physique",
-        icon: "ni ni-single-02 text-yellow",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      },
-      {
-        path: "/requerant-personne-morale",
-        name: "Requérant Personne Morale",
-        icon: "ni ni-briefcase-24 text-info",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      }
-    ]
   },
+
   {
-    path: "/urbanisme",
+    path: "/permis",
     name: "Urbanisme",
-    icon: "ni ni-building text-yellow",
+    icon: "ni ni-paper-diploma text-primary",
+    component: <Permis />,
     layout: "/admin",
-    views: [
-      {
-        path: "/permis",
-        name: "Permis",
-        icon: "ni ni-paper-diploma text-primary",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      }
-    ]
   },
-  {
-    path: "/regie-urbanisme",
-    name: "Régie Urbanisme",
-    icon: "ni ni-money-coins text-danger",
-    layout: "/admin",
-    views: [
+
+  
+
+
+
       {
-        path: "/paiement-tnb",
-        name: "Paiement TNB",
-        icon: "ni ni-credit-card text-warning",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      },
-      {
-        path: "/paiement-permis-urbanisme",
-        name: "Paiement Permis Urbanisme",
+        path: "/PaiementPermisUrbanisme",
+        name: "Régie Urbanisme",
         icon: "ni ni-money-coins text-info",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      }
-    ]
+        component: <PaimentPermisUrbanisme />,
+        layout: "/admin",
+    
   },
 
+
+ {
+    path: "/SuiviTravaux",
+    name: "Annexes Urbanisme",
+    icon: "ni ni-paper-diploma text-primary",
+    component: <SuiviTravaux />,
+    layout: "/admin",
+
+  },
 
   {
-    path: "/annexes-urbanisme",
-    name: "annexes-urbanisme",
-    icon: "ni ni-istanbul text-success",
+    path: "/permis_regie",
+    name: "Regie - Permis Commerciaux",
+    icon: "ni ni-map-big text-orange",
+    component: <PermisRegie />,
     layout: "/admin",
-    views: [
-      {
-        path: "/SuiviTravaux",
-        name: "Suivi-Travaux",
-        icon: "ni ni-paper-diploma text-primary",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      }
-    ]
   },
+
   
   {
-    path: "/regie-permis-commerciaux",
-    name: "Regie Permis Commerciaux",
-    icon: "ni ni-basket text-blue",
-    layout: "/admin",
-    views: [
-      {
-        path: "/permis",
-        name: "Permis",
-        icon: "ni ni-map-big text-orange",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      },
-    ]
-  },    
-{
-    path: "/division-services-commerciaux",
+    path: "/division_commerciaux",
     name: "Division Services Commerciaux",
     icon: "ni ni-shop text-red",
+    component: <division_commerciaux />,
     layout: "/admin",
-    views: [
-      {
-        path: "/Inspection",
-        name: "Inspection",
-        icon: "ni ni-ruler-pencil text-orange",
-        views: [
-          { path: "/index", name: "Liste", component: "InspectionList" },  // Replace with actual component
-          { path: "/create", name: "Créer", component: "InspectionCreate" }, // Replace with actual component
-          { path: "/edit", name: "Modifier", component: "InspectionEdit" }, // Replace with actual component
-        ]
-      },
-      {
-        path: "/Permis-TNB",
-        name: "Permis-TNB",
-        icon: "ni ni-ungroup text-yellow",
-        views: [
-          { path: "/index", name: "Liste", component: "PermisList" },  // Replace with actual component
-          { path: "/create", name: "Créer", component: "PermisCreate" }, // Replace with actual component
-          { path: "/edit", name: "Modifier", component: "PermisEdit" }, // Replace with actual component
-        ]
-      },
-    ]
   },
      
-  {
-    path: "/bureau-hygiene",
-    name: "Bureau d'hygiene",
-    icon: "ni ni-building text-green",
-    layout: "/admin",
-    views: [
       {
-        path: "/Permis-Sante",
-        name: "Permis de santé",
+        path: "/Permis_Sante",
+        name: "Bureau d'hygiene",
         icon: "ni ni-sound-wave text-orange",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
+        component: <Permis_Sante />,
+        layout: "/admin",
       },
-    ]
-  },  
 
   {
     path: "/marches-communaux",
     name: "Marchés Communaux",
     icon: "ni ni-shop text-yellow",
+    component: < MarchesCommunaux />,
     layout: "/admin",
-    views: [
-      {
-        path: "/Espace",
-        name: "Espace",
-        icon: "ni ni-map-big text-green",
-        views: [
-          { path: "/index", name: "Liste", component: "InspectionList" },  // Replace with actual component
-          { path: "/create", name: "Créer", component: "InspectionCreate" }, // Replace with actual component
-          { path: "/edit", name: "Modifier", component: "InspectionEdit" }, // Replace with actual component
-        ]
-      },
-      {
-        path: "/Marches",
-        name: "Marchés",
-        icon: "ni ni-basket text-yellow",
-        views: [
-          { path: "/index", name: "Liste", component: "PermisList" },  // Replace with actual component
-          { path: "/create", name: "Créer", component: "PermisCreate" }, // Replace with actual component
-          { path: "/edit", name: "Modifier", component: "PermisEdit" }, // Replace with actual component
-        ]
-      },
-    ]
   },
 
-  {
-    path: "/regie-marches",
-    name: "Regie marchés",
-    icon: "ni ni-building text-blue",
-    layout: "/admin",
-    views: [
-      {
-        path: "/Paiement-Exploitation",
-        name: "Paiement-Exploitation",
-        icon: "ni ni-credit-card text-orange",
-        views: [
-          { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-          { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-          { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-        ]
-      },
-    ]
-  },
 
+  
   {
-    path: "/espaces-verts",
-    name: "Espaces verts",
+    path: "/PaiementExploitation",
+    name: "Regie de Marché",
+    icon: "ni ni-credit-card text-orange",
+    component: <PaiementExploitation />,
+    layout: "/admin",
+  },
+    
+  
+
+
+  
+  {
+    path: "/espace_verts",
+    name: "Espaces Verts",
     icon: "ni ni-tie-bow text-green",
-    views: [
-      { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-      { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-      { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-    ]
+    component: <espace_verts />,
+    layout: "/admin", 
   },
   {
-    path: "/voirie",
-    name: "voirie",
+    path: "/Voirie",
+    name: "Voirie",
     icon: "ni ni-map-big text-orange",
-    views: [
-      { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-      { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-      { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-    ]
+    component: <Voirie />,
+    layout: "/admin", // Added missing layout
   },
   {
-    path: "/sport-culture",
-    name: "Sport et culture",
+    path: "/sport_culture",
+    name: "Sport et Culture",
     icon: "ni ni-trophy text-yellow",
-    views: [
-      { path: "/index", name: "Liste", component: null },  // Replace 'null' with the actual component
-      { path: "/create", name: "Créer", component: null }, // Replace 'null' with the actual component
-      { path: "/edit", name: "Modifier", component: null }, // Replace 'null' with the actual component
-    ]
-  },
-
-
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: "ni ni-single-02 text-yellow",
-    component: <Profile />,
-    layout: "/admin",
-  },
-
-  {
-    path: "/login",
-    name: "Login",
-    icon: "ni ni-key-25 text-info",
-    component: <Login />,
-    layout: "/auth",
+    component: <sport_culture />,
+    layout: "/admin", 
   },
   {
     path: "/register",
@@ -284,7 +144,20 @@ var routes = [
     component: <Register />,
     layout: "/auth",
   },
- 
+  {
+    path: "/user-profile",
+    name: "User Profile",
+    icon: "ni ni-single-02 text-yellow",
+    component: <Profile />,
+    layout: "/admin",
+  },
+  {
+    path: "/login",
+    name: "Login",
+    icon: "ni ni-key-25 text-info",
+    component: <Login />,
+    layout: "/auth",
+  },
 ];
 
 export default routes;
