@@ -21,7 +21,7 @@ const Register = () => {
         <Card className="bg-secondary shadow border-0">
           <CardHeader className="bg-transparent pb-5">
             <div className="text-muted text-center mt-2 mb-4">
-              <small>Sign up with</small>
+              <small>Inscrivez-vous avec</small>
             </div>
             <div className="text-center">
               <Button
@@ -62,7 +62,7 @@ const Register = () => {
           </CardHeader>
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>Or sign up with credentials</small>
+              <small>Inscrivez-vous avec vos identifiants</small>
             </div>
             <Form role="form">
               <FormGroup>
@@ -72,7 +72,7 @@ const Register = () => {
                       <i className="ni ni-hat-3" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
+                  <Input placeholder="Nom" type="text" />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -97,7 +97,7 @@ const Register = () => {
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
-                    placeholder="Password"
+                    placeholder="Mot de Passe"
                     type="password"
                     autoComplete="new-password"
                   />
@@ -105,8 +105,8 @@ const Register = () => {
               </FormGroup>
               <div className="text-muted font-italic">
                 <small>
-                  password strength:{" "}
-                  <span className="text-success font-weight-700">strong</span>
+                Force du mot de passe:{" "}
+                  <span className="text-success font-weight-700">Fort </span>
                 </small>
               </div>
               <Row className="my-4">
@@ -122,9 +122,9 @@ const Register = () => {
                       htmlFor="customCheckRegister"
                     >
                       <span className="text-muted">
-                        I agree with the{" "}
+                      J'accepte {" "}
                         <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          Privacy Policy
+                        la politique de confidentialité
                         </a>
                       </span>
                     </label>
@@ -133,7 +133,7 @@ const Register = () => {
               </Row>
               <div className="text-center">
                 <Button className="mt-4" color="primary" type="button">
-                  Create account
+                Créer un compte
                 </Button>
               </div>
             </Form>

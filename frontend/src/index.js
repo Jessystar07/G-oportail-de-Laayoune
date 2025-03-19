@@ -14,14 +14,14 @@ import SuiviTravaux from "views/examples/annexes-urbanisme/SuiviTravaux";
 
 import Permis_Sante from "views/examples/bureau-hygiene/Permis_Sante";
 
-import espace_verts from "views/examples/espacesverts/espace_verts";
+import EspaceVert from "views/examples/espacesverts/EspaceVert";
 import Parcelle from "views/examples/Principal/Parcelle";
 import PaiementExploitation from "views/examples/regie-marches/PaiementExploitation";
 import PermisRegie from "views/examples/RegiePermisCommerciaux/permis_regie";
-import PaimentPermisUrbanisme from "views/examples/regie-urbanisme/PaiementPermisUrbanisme";
-import sport_culture from "views/examples/SportCulture/sport_culture";
+import Sport__Culture from "views/examples/SportCulture/Sport__Culture";
 import Voirie from "views/examples/voirie/Voirie";
-import division_commerciaux from "views/examples/division-services-commerciaux/division_commerciaux";
+import DivisionCommerciaux from "views/examples/division-services-commerciaux/DivisionCommerciaux";
+import RegieUrbanisme from "views/examples/regie-urbanisme/RegieUrbanisme";
 
 
 
@@ -36,14 +36,14 @@ root.render(
       <Route path="*" element={<Navigate to="/admin/index" replace />} />
       <Route path="views/examples/Urbanisme/Permis" element={<Permis />} />
       <Route path="views/examples/annexes-urbanisme/SuiviTravaux" element={<SuiviTravaux />} />
-      <Route path="views/examples/division-services-commerciaux/division_commerciaux" element={<division_commerciaux />} />
+      <Route path="views/examples/division-services-commerciaux/DivisionCommerciaux" element={<DivisionCommerciaux />} />
       <Route path="views/examples/bureau-hygiene/Permis_Sante" element={<Permis_Sante />} />
-      <Route path="views/examples/espacesverts/espace_verts" element={<espace_verts />} />
+      <Route path="views/examples/espacesverts/EspaceVert" element={<EspaceVert />} />
       <Route path="views/examples/Principal/Parcelle" element={<Parcelle />} />
       <Route path="views/examples/regie-marches/PaiementExploitation" element={<PaiementExploitation />} />
       <Route path="views/examples/RegiePermisCommerciaux/permis_regie" element={<PermisRegie />} />
-      <Route path="views/examples/regie-urbanisme/PaiementPermisUrbanisme" element={<PaimentPermisUrbanisme />} />
-      <Route path="views/examples/SportCulture/sport_culture" element={<sport_culture />} />
+      <Route path="views/examples/regie-urbanisme/RegieUrbanisme" element={<RegieUrbanisme />} />
+      <Route path="views/examples/SportCulture/Sport__Culture" element={<Sport__Culture />} />
       <Route path="views/examples/voirie/Voirie" element={<Voirie />} />
 
     </Routes>

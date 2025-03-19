@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'rest_framework_gis',
     'corsheaders',
     'api',
+    'geoportal',
 ]
 
 MIDDLEWARE = [

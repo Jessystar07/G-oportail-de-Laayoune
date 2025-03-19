@@ -34,7 +34,7 @@ const Login = () => {
                     href="#"
                     target="_blank"
                   >
-                    About Us
+                     À propos de nous
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -42,7 +42,7 @@ const Login = () => {
                     href="#"
                     target="_blank"
                   >
-                    Blog
+                    ##
                   </NavLink>
                 </NavItem>
 

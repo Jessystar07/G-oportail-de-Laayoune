@@ -21,17 +21,17 @@ const UserHeader = () => {
         <Container className="d-flex align-items-center" fluid>
           <Row>
             <Col lg="7" md="10">
-              <h1 className="display-2 text-white">Hello User</h1>
+              <h1 className="display-2 text-white">Bonjour Utilisateur</h1>
               <p className="text-white mt-0 mb-5">
-                This is your profile page. You can see the progress you've made
-                with your work and manage your projects or assigned tasks
+              Voici votre page de profil. Vous pouvez voir les progrès que vous avez réalisés dans votre travail et gérer vos projets ou tâches assignées. 
+              
               </p>
               <Button
                 color="info"
                 href="#pablo"
                 onClick={(e) => e.preventDefault()}
               >
-                Edit profile
+                Modifier le profil
               </Button>
             </Col>
           </Row>

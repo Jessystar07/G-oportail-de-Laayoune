@@ -45,7 +45,7 @@ const Profile = () => {
                     onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
-                    Connect
+                    Se connecter
                   </Button>
                   <Button
                     className="float-right"
@@ -64,7 +64,7 @@ const Profile = () => {
                     <div className="card-profile-stats d-flex justify-content-center mt-md-5">
                       <div>
                         <span className="heading">22</span>
-                        <span className="description">Friends</span>
+                        <span className="description">Amis</span>
                       </div>
                       <div>
                         <span className="heading">10</span>
@@ -72,7 +72,7 @@ const Profile = () => {
                       </div>
                       <div>
                         <span className="heading">89</span>
-                        <span className="description">Comments</span>
+                        <span className="description">Commentaires</span>
                       </div>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ const Profile = () => {
                     ####################
                   </p>
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                    Show more
+                  Voir plus
                   </a>
                 </div>
               </CardBody>
@@ -110,7 +110,7 @@ const Profile = () => {
               <CardHeader className="bg-white border-0">
                 <Row className="align-items-center">
                   <Col xs="8">
-                    <h3 className="mb-0">My account</h3>
+                    <h3 className="mb-0">Mon compte</h3>
                   </Col>
                   <Col className="text-right" xs="4">
                     <Button
@@ -119,7 +119,7 @@ const Profile = () => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      Settings
+                      Paramètres
                     </Button>
                   </Col>
                 </Row>
@@ -127,7 +127,7 @@ const Profile = () => {
               <CardBody>
                 <Form>
                   <h6 className="heading-small text-muted mb-4">
-                    User information
+                    Informations utilisateur
                   </h6>
                   <div className="pl-lg-4">
                     <Row>
@@ -137,7 +137,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-username"
                           >
-                            Username
+                            Nom d'utilisateur
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -154,7 +154,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-email"
                           >
-                            Email address
+                            Adresse e-mail
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -172,7 +172,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-first-name"
                           >
-                            First name
+                            Prénom
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -189,7 +189,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-last-name"
                           >
-                            Last name
+                            Nom de famille
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -205,7 +205,7 @@ const Profile = () => {
                   <hr className="my-4" />
                   {/* Address */}
                   <h6 className="heading-small text-muted mb-4">
-                    Contact information
+                     Informations de contact
                   </h6>
                   <div className="pl-lg-4">
                     <Row>
@@ -215,7 +215,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-address"
                           >
-                            Address
+                            Addresse
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -234,7 +234,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-city"
                           >
-                            City
+                            Ville
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -251,7 +251,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-country"
                           >
-                            Country
+                            Pays
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -268,7 +268,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-country"
                           >
-                            Postal code
+                            Code postal
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -282,10 +282,10 @@ const Profile = () => {
                   </div>
                   <hr className="my-4" />
                   {/* Description */}
-                  <h6 className="heading-small text-muted mb-4">About me</h6>
+                  <h6 className="heading-small text-muted mb-4">À propos de moi</h6>
                   <div className="pl-lg-4">
                     <FormGroup>
-                      <label>About Me</label>
+                      <label>À propos de moi</label>
                       <Input
                         className="form-control-alternative"
                         placeholder="A few words about you ..."

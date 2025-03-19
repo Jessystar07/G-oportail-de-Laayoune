@@ -1,0 +1,315 @@
+/* Styles pour l'interface de gestion des Espaces Verts */
+.espaces-verts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+  }
+  
+  /* Styles des alertes */
+  .alert {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+  }
+  
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  /* Styles du formulaire */
+  .espace-vert-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  
+  .form-group.half {
+    width: calc(50% - 20px);
+    margin: 0 10px 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #6c757d;
+  }
+  
+  /* Boutons */
+  .form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  .btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  /* Table des espaces verts */
+  .table-section {
+    margin-top: 40px;
+  }
+  
+  .loading, .no-data {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .espaces-verts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .espaces-verts-table th,
+  .espaces-verts-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .espaces-verts-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .espaces-verts-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .espace-nom {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .espace-description {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 4px;
+  }
+  
+  /* Badges de statut */
+  .status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .status-ouvert-au-public {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-en-rénovation {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status-fermé-temporairement {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .status-accès-limité {
+    background-color: #d6d8d9;
+    color: #383d41;
+  }
+  
+  /* Boutons d'action */
+  .actions-cell {
+    white-space: nowrap;
+    text-align: center;
+    gap : 1px;
+  }
+  
+  .btn-edit, .btn-delete {
+    width: 32px;  /* Define a fixed width */
+    height: 32px; /* Define a fixed height */
+    border-radius: 50%; /* Makes the button circular */
+    padding: 0; /* Remove padding to keep the circle shape */
+    display: inline-flex; /* Ensure content is centered */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    margin: 0 5px; /* Add margin for spacing */
+    font-size: 14px; /* Adjust icon size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+
+.btn-edit {
+    background-color: #34495e;
+    color: white;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+}
+
+.btn-edit:hover {
+    background-color: #27ae60;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+  
+  /* Composant de saisie de géométrie */
+  .geometry-input {
+    position: relative;
+  }
+  
+  .geometry-input.invalid textarea {
+    border-color: #dc3545;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .geometry-preview {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px dashed #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .form-group.half {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    .form-buttons {
+      flex-direction: column;
+    }
+    
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }

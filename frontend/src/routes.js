@@ -9,14 +9,14 @@ import SuiviTravaux from "views/examples/annexes-urbanisme/SuiviTravaux";
 import Permis_Sante from "views/examples/bureau-hygiene/Permis_Sante";
 import MarchesCommunaux from "views/examples/marches-communaux/MarchesCommunaux"
 
-import espace_verts from "views/examples/espacesverts/espace_verts";
+import EspaceVert from "views/examples/espacesverts/EspaceVert";
 import Parcelle from "views/examples/Principal/Parcelle";
 import PaiementExploitation from "views/examples/regie-marches/PaiementExploitation";
 import PermisRegie from "views/examples/RegiePermisCommerciaux/permis_regie";
-import PaimentPermisUrbanisme from "views/examples/regie-urbanisme/PaiementPermisUrbanisme";
-import sport_culture from "views/examples/SportCulture/sport_culture";
+import RegieUrbanisme from "views/examples/regie-urbanisme/RegieUrbanisme";
+import Sport__Culture from "views/examples/SportCulture/Sport__Culture";
 import Voirie from "views/examples/voirie/Voirie";
-import division_commerciaux from "views/examples/division-services-commerciaux/division_commerciaux";
+import DivisionCommerciaux from "views/examples/division-services-commerciaux/DivisionCommerciaux";
 
 
 
@@ -51,10 +51,10 @@ const routes = [
 
 
       {
-        path: "/PaiementPermisUrbanisme",
+        path: "/RegieUrbanisme",
         name: "Régie Urbanisme",
         icon: "ni ni-money-coins text-info",
-        component: <PaimentPermisUrbanisme />,
+        component: <RegieUrbanisme />,
         layout: "/admin",
     
   },
@@ -79,10 +79,10 @@ const routes = [
 
   
   {
-    path: "/division_commerciaux",
+    path: "/DivisionCommerciaux",
     name: "Division Services Commerciaux",
     icon: "ni ni-shop text-red",
-    component: <division_commerciaux />,
+    component: <DivisionCommerciaux />,
     layout: "/admin",
   },
      
@@ -117,10 +117,10 @@ const routes = [
 
   
   {
-    path: "/espace_verts",
+    path: "/EspaceVert",
     name: "Espaces Verts",
     icon: "ni ni-tie-bow text-green",
-    component: <espace_verts />,
+    component: <EspaceVert />,
     layout: "/admin", 
   },
   {
@@ -131,29 +131,29 @@ const routes = [
     layout: "/admin", // Added missing layout
   },
   {
-    path: "/sport_culture",
+    path: "/Sport__Culture",
     name: "Sport et Culture",
     icon: "ni ni-trophy text-yellow",
-    component: <sport_culture />,
+    component: <Sport__Culture />,
     layout: "/admin", 
   },
   {
     path: "/register",
-    name: "Register",
+    name: "S'inscrire",
     icon: "ni ni-circle-08 text-pink",
     component: <Register />,
     layout: "/auth",
   },
   {
     path: "/user-profile",
-    name: "User Profile",
+    name: "Profil utilisateur",
     icon: "ni ni-single-02 text-yellow",
     component: <Profile />,
     layout: "/admin",
   },
   {
     path: "/login",
-    name: "Login",
+    name: "Se connecter",
     icon: "ni ni-key-25 text-info",
     component: <Login />,
     layout: "/auth",

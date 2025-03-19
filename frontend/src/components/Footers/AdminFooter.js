@@ -28,7 +28,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Geoportal 
+                Géoportail 
               </NavLink>
             </NavItem>
 
@@ -38,7 +38,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                About Us
+                
               </NavLink>
             </NavItem>
 
@@ -48,7 +48,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Blog
+                ##
               </NavLink>
             </NavItem>
             

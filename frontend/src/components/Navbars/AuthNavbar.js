@@ -46,7 +46,7 @@ const AdminNavbar = () => {
                 tag={Link}
               >
                 <i className="ni ni-planet" />
-                <span className="nav-link-inner--text">Geoportal</span>
+                <span className="nav-link-inner--text">Géoportail</span>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -56,7 +56,7 @@ const AdminNavbar = () => {
                 tag={Link}
               >
                 <i className="ni ni-circle-08" />
-                <span className="nav-link-inner--text">Register</span>
+                <span className="nav-link-inner--text">S'inscrire</span>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -66,7 +66,7 @@ const AdminNavbar = () => {
                 tag={Link}
               >
                 <i className="ni ni-key-25" />
-                <span className="nav-link-inner--text">Login</span>
+                <span className="nav-link-inner--text">Se connecter</span>
               </NavLink>
             </NavItem>
             <NavItem>

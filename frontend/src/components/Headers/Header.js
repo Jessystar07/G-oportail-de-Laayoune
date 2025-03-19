@@ -18,10 +18,10 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Administrative Boundaries
+                           Limites administratives
                         </CardTitle>
                         <span className="h2 font-weight-bold mb-0">
-                          Add Data
+                         Ajouter des données
                         </span>
                       </div>
                       <Col className="col-auto">
@@ -34,7 +34,7 @@ const Header = () => {
                       <span className="text-success mr-2">
                         <i className="#" /> ###
                       </span>{" "}
-                      <span className="text-nowrap">GeoData</span>
+                      <span className="text-nowrap">Données spatial</span>
                     </p>
                   </CardBody>
                 </Card>
