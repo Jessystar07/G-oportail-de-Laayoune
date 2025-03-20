@@ -47,12 +47,7 @@ class TestView(APIView):
 
 
 
-class ParcelleViewSet(viewsets.ModelViewSet):
-    """
-    A viewset for viewing and editing Parcelle instances.
-    """
-    queryset = Parcelle.objects.all()
-    serializer_class = ParcelleSerializer
+
 
 
 # Simple view to test connection
@@ -72,7 +67,13 @@ def test_data(request):
         return JsonResponse({"message": "Data received successfully!"})
     return JsonResponse({"message": "Test data endpoint working!"})
 
-
+class ParcelleViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing Parcelle instances.
+    """
+    queryset = Parcelle.objects.all()
+    serializer_class = ParcelleSerializer
+    
 class PersonnePhysiqueViewSet(viewsets.ModelViewSet):
     """
     A viewset for viewing and editing PersonnePhysique instances.
@@ -81,21 +82,19 @@ class PersonnePhysiqueViewSet(viewsets.ModelViewSet):
     serializer_class = PersonnePhysiqueSerializer
 
 
-class ItemViewSet(viewsets.ModelViewSet):
-    """
-    A viewset for viewing and editing Item instances.
-    """
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
-
-
 class PersonneMoraleViewSet(viewsets.ModelViewSet):
     """
     A viewset for viewing and editing PersonneMorale instances.
     """
     queryset = PersonneMorale.objects.all()
     serializer_class = PersonneMoraleSerializer
-
+    
+class ItemViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing Item instances.
+    """
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
 
 class PermisCommercialViewSet(viewsets.ModelViewSet):
     """
