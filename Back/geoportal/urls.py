@@ -11,5 +11,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # Inclure directement les routes de api.urls
 ]
-
-
