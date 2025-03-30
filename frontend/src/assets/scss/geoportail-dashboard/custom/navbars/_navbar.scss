@@ -118,6 +118,7 @@
         }
     }
 
+
     @include media-breakpoint-up(md) {
         .navbar-transparent {
             .navbar-nav {
@@ -147,7 +148,15 @@
                 @include hover-focus {
                     color: $navbar-dark-color;
                 }
+                
             }
         }
     }
+}
+#navbar-main {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(6 6 6 / 95%);
 }

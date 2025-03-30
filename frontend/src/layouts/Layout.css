@@ -23,10 +23,13 @@
 
 /* Header styles */
 .header {
-  background-color: #34495e;
+  background-color: #dae6f9;
   color: white;
   padding: 15px;
   text-align: center;
+}
+.text-white {
+  color: #040404 !important;
 }
 
 /* Content styles */
@@ -35,6 +38,10 @@
   padding: 20px;
   width: 100%;
   transition: all 0.3s ease;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 /* Footer styles */

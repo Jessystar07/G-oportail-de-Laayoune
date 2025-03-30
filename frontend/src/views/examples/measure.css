@@ -1,0 +1,51 @@
+.leaflet-measure-control {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+  
+  .measure-mode-selector,
+  .measure-unit-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .measure-mode-selector button,
+  .measure-unit-selector button,
+  .measure-stop-btn {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .measure-mode-selector button:hover,
+  .measure-unit-selector button:hover,
+  .measure-stop-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .measure-mode-selector button.active,
+  .measure-unit-selector button.active {
+    background-color: #5e72e4;
+    color: white;
+  }
+  
+  .measure-stop-btn {
+    background-color: #f5365c;
+    color: white;
+    width: 100%;
+  }
+  
+  .leaflet-measure-resultpopup {
+    background-color: white !important;
+    border: 2px solid rgba(0, 0, 0, 0.2) !important;
+    color: #333 !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+    font-weight: normal !important;
+  }

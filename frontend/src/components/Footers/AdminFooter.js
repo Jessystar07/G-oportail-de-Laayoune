@@ -1,5 +1,3 @@
-
-// reactstrap components
 import { Container, Row, Col, Nav, NavItem, NavLink } from "reactstrap";
 
 const Footer = () => {
@@ -18,41 +16,6 @@ const Footer = () => {
               EL Ayyachi all rights reserved
             </a>
           </div>
-        </Col>
-
-        <Col xl="6">
-          <Nav className="nav-footer justify-content-center justify-content-xl-end">
-            <NavItem>
-              <NavLink
-                href="#"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Géoportail 
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink
-                href="#"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink
-                href="#"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                ##
-              </NavLink>
-            </NavItem>
-            
-          </Nav>
         </Col>
       </Row>
     </footer>

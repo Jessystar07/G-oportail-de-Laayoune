@@ -17,8 +17,7 @@ import RegieUrbanisme from "views/examples/regie-urbanisme/RegieUrbanisme";
 import Sport__Culture from "views/examples/SportCulture/Sport__Culture";
 import Voirie from "views/examples/voirie/Voirie";
 import DivisionCommerciaux from "views/examples/division-services-commerciaux/DivisionCommerciaux";
-
-
+import mapcomponent from "views/examples/mapcomponent";
 
 const routes = [
   {
@@ -157,6 +156,13 @@ const routes = [
     icon: "ni ni-key-25 text-info",
     component: <Login />,
     layout: "/auth",
+  },
+  {
+    path: "/mapcomponent",
+    name: "New map",
+    icon: "ni ni-tie-bow text-green",
+    component: <mapcomponent/>,
+    layout: "/admin", 
   },
 ];
 

@@ -37,7 +37,7 @@ const Admin = () => {
       
       <div className={`main-container ${!isSidebarOpen ? "expanded" : ""}`}>
         <div className="header">
-          <AdminNavbar brandText="Dashboard" />
+          <AdminNavbar brandText="Urban Planning Geoportal" />
         </div>
 
         <div className="content">

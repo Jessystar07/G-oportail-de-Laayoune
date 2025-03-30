@@ -1,4 +1,3 @@
-
 import { NavItem, NavLink, Nav, Container, Row, Col } from "reactstrap";
 
 const Login = () => {
@@ -18,35 +17,6 @@ const Login = () => {
                   EL Ayyachi all rights reserved
                 </a>
               </div>
-            </Col>
-            <Col xl="6">
-              <Nav className="nav-footer justify-content-center justify-content-xl-end">
-                <NavItem>
-                  <NavLink
-                    href="#"
-                    target="_blank"
-                  >
-                    EL Ayyachi  all rights reserved
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="#"
-                    target="_blank"
-                  >
-                     À propos de nous
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="#"
-                    target="_blank"
-                  >
-                    ##
-                  </NavLink>
-                </NavItem>
-
-              </Nav>
             </Col>
           </Row>
         </Container>
